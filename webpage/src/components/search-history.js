@@ -13,7 +13,7 @@ function SearchHistory() {
     };
 
     useEffect(() => {
-        axios.get('https://api.spacexdata.com/v3/history/${idFromClick}')
+        axios.get(`https://api.spacexdata.com/v3/history/${idFromClick}`)
             .then(res => { console.log(res); setData(res.data) })
             .catch(err => { console.log(err) })
     }, [idFromClick])
