@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-function SearchHistory() {
+function SearchRockets() {
     const [data, setData] = useState({});
     const [id, setId] = useState(1);
     const [idFromClick, setIdFromClick] = useState(1);
@@ -27,4 +27,4 @@ function SearchHistory() {
     )
 }
 
-export default SearchHistory
+export default SearchRockets
