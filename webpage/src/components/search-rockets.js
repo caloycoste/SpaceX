@@ -11,7 +11,7 @@ function SearchHistory() {
     };
 
     useEffect(() => {
-        axios.get(`https://api.spacexdata.com/v3/history/${idFromClick}`)
+        axios.get(`https://api.spacexdata.com/v3/rockets/${idFromClick}`)
             .then(res => { console.log(res); setData(res.data) })
             .catch(err => { console.log(err) })
     }, [idFromClick])
@@ -21,7 +21,7 @@ function SearchHistory() {
             <input type='text' value={id} onChange={e => setId(e.target.value)}></input>
             <button onClick={handleClick}>Read More</button>
             <div>
-                {data.title}
+                {data.country}
             </div>
         </div>
     )
