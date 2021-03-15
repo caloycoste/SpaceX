@@ -6,25 +6,35 @@ function UpcomingCapsules() {
     const [loading, isLoading] = useState(true);
     const columns = data[0] && Object.keys(data[0]);
 
-    const tableStyle = {
-        body: {
-            padding: 20,
-            height: 50,
-        },
+    const styles = {
 
         container: {
-            maxWidth: 3000,
             marginRight: 'auto',
             marginLeft: 'auto',
             marginTop: 20,
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            minHeight: 100,
+
         },
 
+        tableRowHeader: {
+            backgroundColor: '#dae0db',
+            height: 50,
+            paddingLeft: 50,
+            paddingRight: 50,
+            textAlign:'center',
+        },
 
+        tableRow: {
+            backgroundColor: '#f2f5f3',
+            height: 50,
+            paddingLeft: 50,
+            paddingRight: 50,
+            textAlign:'center',
+        }
     }
+
 
     useEffect(() => {
         fetch('https://api.spacexdata.com/v3/capsules/upcoming')
@@ -47,30 +57,33 @@ function UpcomingCapsules() {
             </div>
 
             {loading ? <div>LOADING</div> :
-                <div style={tableStyle.container}>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Serial</th>
-                                <th>ID</th>
-                                <th>Status</th>
-                                <th>Launch</th>
-                                <th>Launch Unix</th>
-                                <th>Missions</th>
-                                <th>Landing</th>
-                                <th>Type</th>
-                                <th>Details</th>
-                                <th>Reuse Count</th>
-                            </tr>
+                <div style={styles.container}>
+                    <div>
+                        <table>
+                            <thead>
+                                <tr style={styles.tableRowHeader}>
+                                    <th>Serial</th>
+                                    <th>ID</th>
+                                    <th>Status</th>
+                                    <th>Launch</th>
+                                    <th>Launch Unix</th>
+                                    <th>Missions</th>
+                                    <th>Landing</th>
+                                    <th>Type</th>
+                                    <th>Details</th>
+                                    <th>Reuse Count</th>
+                                </tr>
 
-                        </thead>
+                            </thead>
 
-                        <tbody style={tableStyle.body}>
-                            {data.map(row =>
-                                <tr>{columns.map(column =>
-                                    <td>{row[column]}</td>)}</tr>)}
-                        </tbody>
-                    </table>
+                            <tbody>
+                                {data.map(row =>
+                                    <tr style={styles.tableRow}>{columns.map(column =>
+                                        <td>{row[column]}</td>)}</tr>)}
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>}
         </div>
     )

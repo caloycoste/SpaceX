@@ -22,13 +22,13 @@ function History() {
             marginRight: 'auto',
             alignItems: 'center',
             justifyContent: 'center',
-            backgroundColor: '#dae0db',
+            backgroundColor: '#e9f2f5',
             borderRadius:20,
 
         },
         dataContainer: {
-            marginLeft:50,
-            marginRight:50,
+            marginLeft:60,
+            marginRight:80,
             paddingTop:10,
             borderBottom: '3px solid rgb(212, 212, 212)',
             textAlign:'justify',
