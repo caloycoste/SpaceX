@@ -5,6 +5,7 @@ import SearchHistory from './components/search-history'
 import Rockets from './components/rockets'
 import SearchRockets from './components/search-rockets'
 import UpcomingCapsules from './components/UpcomingCapsules'
+import Missions from './components/Missions'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Rockets />
       <SearchRockets />
       <UpcomingCapsules/>
+      <Missions/>
     </div>
   );
 }

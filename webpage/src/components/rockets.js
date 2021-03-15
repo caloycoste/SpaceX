@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import DataTable from './DataTable'
 
 function Rockets() {
 

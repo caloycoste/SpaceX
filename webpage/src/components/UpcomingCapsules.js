@@ -4,7 +4,27 @@ function UpcomingCapsules() {
 
     const [data, setData] = useState([]);
     const [loading, isLoading] = useState(true);
-    const columns = data[0] && Object.keys(data[0])
+    const columns = data[0] && Object.keys(data[0]);
+
+    const tableStyle = {
+        body: {
+            padding: 20,
+            height: 50,
+        },
+
+        container: {
+            maxWidth: 3000,
+            marginRight: 'auto',
+            marginLeft: 'auto',
+            marginTop: 20,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            minHeight: 100,
+        },
+
+
+    }
 
     useEffect(() => {
         fetch('https://api.spacexdata.com/v3/capsules/upcoming')
@@ -27,26 +47,31 @@ function UpcomingCapsules() {
             </div>
 
             {loading ? <div>LOADING</div> :
-            <div>
-            <table>
-                <thead>
-                    <tr>{data[0] && columns.map((heading) => <th>{heading}</th>)}
+                <div style={tableStyle.container}>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Serial</th>
+                                <th>ID</th>
+                                <th>Status</th>
+                                <th>Launch</th>
+                                <th>Launch Unix</th>
+                                <th>Missions</th>
+                                <th>Landing</th>
+                                <th>Type</th>
+                                <th>Details</th>
+                                <th>Reuse Count</th>
+                            </tr>
 
-                    </tr>
+                        </thead>
 
-                </thead>
-
-                <tbody>
-                    {data.map(row => 
-                    <tr>{columns.map(column => 
-                    <td>{row[column]}</td>)}</tr>)}
-
-                </tbody>
-
-            </table>
-  
-            </div>}
-
+                        <tbody style={tableStyle.body}>
+                            {data.map(row =>
+                                <tr>{columns.map(column =>
+                                    <td>{row[column]}</td>)}</tr>)}
+                        </tbody>
+                    </table>
+                </div>}
         </div>
     )
 }
