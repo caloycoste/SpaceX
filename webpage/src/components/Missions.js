@@ -10,6 +10,17 @@ function Missions() {
             .then((data) => setData(data));
     })
 
+    const styles = {
+
+        dataContainer: {
+            marginLeft: 60,
+            marginRight: 80,
+            paddingTop: 10,
+            borderBottom: '3px solid rgb(212, 212, 212)',
+            textAlign: 'justify',
+        },
+    }
+
     return (
         <div>
             <div style={{
@@ -25,7 +36,7 @@ function Missions() {
             <div>
                 <div>
                     {data.map((mission) => {
-                        return <div><b>{mission.mission_name}</b>
+                        return <div style={styles.dataContainer}><b>{mission.mission_name}</b>
                             <p>{mission.description}</p>
                             <p>Visit their website: {mission.website}</p></div>
                     })}

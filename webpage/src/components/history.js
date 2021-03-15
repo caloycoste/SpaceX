@@ -15,14 +15,6 @@ function History() {
 
     const styles = {
 
-        container: {
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-
-        },
         dataContainer: {
             marginLeft: 60,
             marginRight: 80,
@@ -45,7 +37,7 @@ function History() {
                 <text style={{ color: 'white', fontSize: 40 }}>History</text>
             </div>
             {loading ? <div>LOADING</div> :
-                <div style={styles.container}>
+                <div>
                     <ol>
                         {data.map(history => (
                             <div style={styles.dataContainer}>
