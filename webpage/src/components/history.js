@@ -16,14 +16,11 @@ function History() {
     const styles = {
 
         container: {
-            marginTop: 10,
-            width: 1500,
             marginLeft: 'auto',
             marginRight: 'auto',
+            display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            backgroundColor: '#e9f2f5',
-            borderRadius:20,
 
         },
         dataContainer: {

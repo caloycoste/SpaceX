@@ -7,9 +7,10 @@ function MissionsTable({ data }) {
                 <tbody>
                     {data.map((mission) => (
                         <tr key={mission.mission_id}>
-                            <td>{mission.mission_id}</td>
+                            <td>{mission.missin_id}</td>
                             <td>{mission.mission_name}</td>
                             <td>{mission.manufacturers}</td>
+                            <td>{mission.payload_ids[0]}</td>
                         </tr>
                     )
                     )}
