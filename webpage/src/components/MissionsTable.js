@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function MissionsTable({ data }) {
+
+    const [searchItem, setSearchItem] = useState('');
+
     const styles = {
 
         container: {
@@ -37,6 +40,13 @@ function MissionsTable({ data }) {
     return (
         <div>
             <div style={styles.container}>
+                <div>
+                    <input type='text' value={searchItem} onChange={(e) => setSearchItem(e.target.value)} />
+                    <label> Filter ID</label>
+                </div>
+
+            </div>
+            <div style={styles.container}>
                 <table>
                     <thead>
                         <tr style={styles.tableRowHeader}>
@@ -47,14 +57,21 @@ function MissionsTable({ data }) {
                         </tr>
                     </thead>
                     <tbody>
-                        {data.map((mission) => (
+                        {data.filter((value) => {
+                            if (searchItem == '') {
+                                return value
+                            } else if (value.mission_id.toLowerCase()
+                            .includes(searchItem.toLowerCase())) {
+                                return value
+                            }
+                        }).map((mission) => (
                             <tr key={mission.mission_id} style={styles.tableRow}>
                                 <td style={styles.tableText}>{mission.mission_id}</td>
                                 <td style={styles.tableText}>{mission.mission_name}</td>
                                 <td style={styles.tableText}>{mission.manufacturers}</td>
                                 <td style={styles.tableText}>{mission.payload_ids[0]}</td>
                             </tr>
-                            ))}
+                        ))}
                     </tbody>
                 </table>
             </div>
