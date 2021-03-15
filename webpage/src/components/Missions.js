@@ -25,13 +25,7 @@ function Missions() {
                 <text style={{ color: 'white', fontSize: 40 }}>Missions</text>
             </div>
             <div>
-                <ol>
-                    {data.map((mission) => { return <li>{mission.mission_name}</li> })}
-                </ol>
-            </div>
-
-            <div>
-
+                    {data.map((mission) => { return <div>{mission.mission_name} <p>{mission.description}</p></div> })}
             </div>
 
         </div>
