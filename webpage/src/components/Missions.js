@@ -8,9 +8,7 @@ function Missions() {
         fetch('https://api.spacexdata.com/v3/missions')
             .then((response) => response.json())
             .then((data) => setData(data));
-
-    }
-    )
+    })
 
     return (
         <div>
@@ -25,8 +23,15 @@ function Missions() {
                 <text style={{ color: 'white', fontSize: 40 }}>Missions</text>
             </div>
             <div>
-                    {data.map((mission) => { return <div><b>{mission.mission_name}</b> <p>{mission.description}</p></div> })}
+                <div>
+                    {data.map((mission) => {
+                        return <div><b>{mission.mission_name}</b>
+                            <p>{mission.description}</p>
+                            <p>Visit their website: {mission.website}</p></div>
+                    })}
+                </div>
             </div>
+
 
         </div>
     )

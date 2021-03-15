@@ -32,9 +32,12 @@ function UpcomingCapsules() {
             paddingLeft: 50,
             paddingRight: 50,
             textAlign:'center',
+        },
+
+        tableText: {
+            padding:15,
         }
     }
-
 
     useEffect(() => {
         fetch('https://api.spacexdata.com/v3/capsules/upcoming')
@@ -57,33 +60,30 @@ function UpcomingCapsules() {
             </div>
 
             {loading ? <div>LOADING</div> :
-                <div style={styles.container}>
-                    <div>
+                <div>
+                    <div style={styles.container}>
                         <table>
                             <thead>
                                 <tr style={styles.tableRowHeader}>
-                                    <th>Serial</th>
-                                    <th>ID</th>
-                                    <th>Status</th>
-                                    <th>Launch</th>
-                                    <th>Launch Unix</th>
-                                    <th>Missions</th>
-                                    <th>Landing</th>
-                                    <th>Type</th>
-                                    <th>Details</th>
-                                    <th>Reuse Count</th>
+                                    <th style={styles.tableText}>Serial</th>
+                                    <th style={styles.tableText}>ID</th>
+                                    <th style={styles.tableText}>Status</th>
+                                    <th style={styles.tableText}>Launch</th>
+                                    <th style={styles.tableText}>Launch Unix</th>
+                                    <th style={styles.tableText}>Missions</th>
+                                    <th style={styles.tableText}>Landing</th>
+                                    <th style={styles.tableText}>Type</th>
+                                    <th style={styles.tableText}>Details</th>
+                                    <th style={styles.tableText}>Reuse Count</th>
                                 </tr>
-
                             </thead>
-
                             <tbody>
                                 {data.map(row =>
                                     <tr style={styles.tableRow}>{columns.map(column =>
-                                        <td>{row[column]}</td>)}</tr>)}
+                                        <td style={styles.tableText}>{row[column]}</td>)}</tr>)}
                             </tbody>
                         </table>
                     </div>
-
                 </div>}
         </div>
     )

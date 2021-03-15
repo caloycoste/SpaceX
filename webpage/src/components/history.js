@@ -24,11 +24,11 @@ function History() {
 
         },
         dataContainer: {
-            marginLeft:60,
-            marginRight:80,
-            paddingTop:10,
+            marginLeft: 60,
+            marginRight: 80,
+            paddingTop: 10,
             borderBottom: '3px solid rgb(212, 212, 212)',
-            textAlign:'justify',
+            textAlign: 'justify',
 
         },
     }
@@ -47,16 +47,15 @@ function History() {
             {loading ? <div>LOADING</div> :
                 <div style={styles.container}>
                     <ol>
-                    {data.map(history => (
-                        <div style={styles.dataContainer}>
+                        {data.map(history => (
+                            <div style={styles.dataContainer}>
                                 <li key={history.id}><b>{history.title}</b>
                                     <p>{history.details}</p>
                                 </li>
-                        </div>
-                    ))}
+                            </div>
+                        ))}
                     </ol>
                 </div>}
-
         </div>
     )
 }

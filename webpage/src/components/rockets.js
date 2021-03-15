@@ -27,7 +27,7 @@ function Rockets() {
 
             {loading ? <div>LOADING</div> :
                 <div style={{ marginLeft: 50 }}>
-                    <ol style={{ fontSize: 20, textAlign: 'left' }}>
+                    <ol>
                         {data.map((rocket) => {
                             return <div>
                                 <li key={rocket.id}>{rocket.country}</li>
@@ -35,7 +35,6 @@ function Rockets() {
                         })}
                     </ol>
                 </div>}
-
         </div>
     )
 }

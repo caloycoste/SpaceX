@@ -11,7 +11,8 @@ import React, { useState, useEffect } from 'react'
 
 function App() {
 
-  const [data, setData] = useState([])
+  const [data, setData] = useState([]);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
       fetch('https://api.spacexdata.com/v3/missions')
@@ -29,6 +30,8 @@ function App() {
       <SearchRockets />
       <UpcomingCapsules/>
       <Missions/>
+
+      <input type='text' value={search} onChange={(e)=>setSearch(e.target.value)}/>
       <MissionsTable data={data}/>
     </div>
   );
