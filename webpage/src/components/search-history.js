@@ -22,7 +22,7 @@ function SearchHistory() {
             <input type='text' value={id} onChange={e => setId(e.target.value)}></input>
             <button onClick={handleClick}>Read More</button>
             <div>
-                {data.links.wikipedia}
+                {data.title}
             </div>
         </div>
     )
