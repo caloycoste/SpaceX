@@ -9,19 +9,17 @@ function Navigation() {
 
         navBar: {
             backgroundColor: 'gray',
-            display: 'flex',
             height: 735,
+            display:'flex',
             backgroundImage: 'url(https://images.pexels.com/photos/23769/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)',
             backgroundAttachment: 'fixed',
-            alignItems: 'center',
-            justifyContent: 'center'
+        
         },
 
         navItems: {
             listStyleType: 'none',
             display: 'flex',
-            alignItems: 'center',
-            translateX: -100,
+            marginTop:30
         },
 
         navLinks: {
@@ -35,7 +33,7 @@ function Navigation() {
         <div style={styles.landingPage}>
             <BrowserRouter>
                 <div style={styles.navBar}>
-                    <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/SpaceX-Logo-Xonly.svg/1280px-SpaceX-Logo-Xonly.svg.png' style={{width:400}}/>
+                    <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/SpaceX-Logo-Xonly.svg/1280px-SpaceX-Logo-Xonly.svg.png' style={{width:300, height:100}}/>
                     <ul style={styles.navItems}>
                         <li>
                             <Link Link to='/' style={styles.navLinks}>Home</Link>
