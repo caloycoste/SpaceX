@@ -1,6 +1,7 @@
 /* eslint-disable no-lone-blocks */
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import SearchHistory from './search-history'
 
 function History() {
     const [data, setData] = useState([]);
@@ -48,6 +49,8 @@ function History() {
                         ))}
                     </ol>
                 </div>}
+                <SearchHistory/>
+                
         </div>
     )
 }

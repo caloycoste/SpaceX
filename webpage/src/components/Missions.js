@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import MissionsTable from './MissionsTable'
 
 function Missions() {
 
@@ -26,7 +27,6 @@ function Missions() {
             <div style={{
                 height: 100,
                 backgroundColor: 'teal',
-                marginTop: 20,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'
@@ -42,6 +42,7 @@ function Missions() {
                     })}
                 </div>
             </div>
+            <MissionsTable data={data} />
 
 
         </div>
