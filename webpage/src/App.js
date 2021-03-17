@@ -26,7 +26,6 @@ function App() {
       <History />
       <SearchHistory />
       <Rockets />
-      <SearchRockets />
       <UpcomingCapsules/>
       <Missions/>
       <MissionsTable data={data}/>
