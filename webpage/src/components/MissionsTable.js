@@ -61,7 +61,7 @@ function MissionsTable({ data }) {
                             if (searchItem == '') {
                                 return value
                             } else if (value.mission_id.toLowerCase()
-                            .includes(searchItem.toLowerCase())) {
+                                .includes(searchItem.toLowerCase())) {
                                 return value
                             }
                         }).map((mission) => (
