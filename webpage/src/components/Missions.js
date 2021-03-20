@@ -29,7 +29,8 @@ function Missions() {
                 backgroundColor: 'teal',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                marginTop:20
             }}>
                 <text style={{ color: 'white', fontSize: 40 }}>Missions</text>
             </div>
