@@ -19,7 +19,7 @@
     display: flex;
     position:fixed;
     left: -100%;
-    top:0;
+    top:80px;
     transition: 500ms;
   }
 
