@@ -26,13 +26,11 @@ function Missions() {
         <div>
             <div style={{
                 height: 100,
-                backgroundColor: 'teal',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginTop:20
             }}>
-                <text style={{ color: 'white', fontSize: 40 }}>Missions</text>
+                <text style={{ fontSize: 40, fontWeight:'bold', }}>Missions</text>
             </div>
             <div>
                 <div>

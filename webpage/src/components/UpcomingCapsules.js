@@ -50,13 +50,11 @@ function UpcomingCapsules() {
         <div>
             <div style={{
                 height: 100,
-                backgroundColor: 'teal',
-                marginTop: 20,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'
             }}>
-                <text style={{ color: 'white', fontSize: 40 }}>Upcoming Capsules</text>
+                <text style={{ fontSize: 40, fontWeight:'bold', }}>Upcoming Capsules</text>
             </div>
 
             {loading ? <div>LOADING</div> :

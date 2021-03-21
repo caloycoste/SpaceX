@@ -30,12 +30,11 @@ function History() {
         <div>
             <div style={{
                 height: 100,
-                backgroundColor: 'teal',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'
             }}>
-                <text style={{ color: 'white', fontSize: 40 }}>History</text>
+                <text style={{ fontSize: 40, fontWeight:'bold', }}>History</text>
             </div>
             {loading ? <div>LOADING</div> :
                 <div>
