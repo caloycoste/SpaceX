@@ -19,6 +19,7 @@ function HeaderSection({
                             <h1>{welcomeText}</h1>
                             <p>{welcomeDesc}</p>
                         </div>
+                        <button className='btn'>Visit Website</button>
 
                     </div>
                 </div>
