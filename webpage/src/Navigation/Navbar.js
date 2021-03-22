@@ -13,6 +13,9 @@ function Navbar() {
     return (
         <div>
             <div className='navbar'>
+                <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/SpaceX-Logo-Xonly.svg/1280px-SpaceX-Logo-Xonly.svg.png'
+                    style={{ width: 150, paddingLeft: 30 }}
+                />
                 <Link to='#' className='menu-bars'>
                     <FaIcons.FaBars onClick={showSidebar} />
                 </Link>
