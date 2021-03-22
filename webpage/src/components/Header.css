@@ -1,5 +1,6 @@
 .container {
-    padding:70px 30px 70px 30px;
+    padding:70px 40px 70px 40px;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,6 +23,29 @@
 .textWrapper {
     width:100%;
     color:white;
+    text-align: justify;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+
+.btn {
+    padding:10px;
+    width: 200px;
+    background-color: transparent;
+    border-color: rgb(219, 219, 219);
+    border-width: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 20px;
+    color:white;
+}
+
+.btn:hover {
+    background-color:  rgb(219, 219, 219);
+    color:rgb(2, 2, 63);
+
 
 }
 
