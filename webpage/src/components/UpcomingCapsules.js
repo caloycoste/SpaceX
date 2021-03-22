@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Navbar from '../Navigation/Navbar'
 
 function UpcomingCapsules() {
 
@@ -48,6 +49,7 @@ function UpcomingCapsules() {
 
     return (
         <div>
+            <Navbar/>
             <div style={{
                 height: 100,
                 display: 'flex',
