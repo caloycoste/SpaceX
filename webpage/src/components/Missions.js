@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import MissionsTable from './MissionsTable'
-import Navbar from '../Navigation/Navbar'
 
 
 function Missions() {
@@ -26,7 +25,6 @@ function Missions() {
 
     return (
         <div>
-            <Navbar/>
             <div style={{
                 height: 100,
                 display: 'flex',

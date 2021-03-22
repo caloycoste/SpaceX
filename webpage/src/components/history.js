@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import SearchHistory from './search-history'
-import Navbar from '../Navigation/Navbar'
 
 function History() {
     const [data, setData] = useState([]);
@@ -29,7 +28,6 @@ function History() {
 
     return (
         <div>
-            <Navbar />
             <div style={{
                 height: 100,
                 display: 'flex',
